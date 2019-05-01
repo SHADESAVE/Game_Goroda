@@ -3,6 +3,7 @@ package com.example.gamegoroda;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -26,8 +27,9 @@ public class HowToPlayActivity extends AppCompatActivity {
                 "2-й участник: Краков\n" +
                 "1-й участник: Витебск\n" +
                 "2-й участник: Краснодар\n" +
-                "1-й участник: Рим и т.д.";
+                "1-й участник: Рим и т.д.\n";
         textView.setText(text);
+        textView.setMovementMethod(new ScrollingMovementMethod());
     }
 
     protected void buttonBackToMenu (View view) {

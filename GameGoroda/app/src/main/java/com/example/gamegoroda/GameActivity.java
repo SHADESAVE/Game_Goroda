@@ -40,7 +40,7 @@ public class GameActivity extends AppCompatActivity {
                 break;
         }
     }
-    public void buttonSend (View view) {
+    protected void buttonSend (View view) {
 
         Data data = new Data();
         ((TextView)findViewById(R.id.textView4)).setText("");
@@ -90,7 +90,7 @@ public class GameActivity extends AppCompatActivity {
                 Score = Score + 1;
         }
     }
-    public void buttonDefeated(View view) {
+    protected void buttonDefeated(View view) {
 
         Intent intent = new Intent(GameActivity.this, LooseActivity.class);
         intent.putExtra("Message", "ВЫ ПРОИГРАЛИ!");
@@ -100,5 +100,18 @@ public class GameActivity extends AppCompatActivity {
         data.deleteHistory(this, k);
         startActivity(intent);
         //overridePendingTransition(0,0);
+    }
+
+    protected void buttonHowToPlay (View view) {
+        Intent intent = new Intent(GameActivity.this, HowToPlayActivity.class);
+        startActivity(intent);
+        overridePendingTransition(0,0);
+    }
+
+    protected void buttonSearchHistory (View view) {
+        Intent intent = new Intent(GameActivity.this, HistoryActivity.class);
+        intent.putExtra("K",""+k);
+        startActivity(intent);
+        overridePendingTransition(0,0);
     }
 }

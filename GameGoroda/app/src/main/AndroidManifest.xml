@@ -8,8 +8,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".HowToPlayActivity"></activity>
+        android:theme="@style/theme">
+        <activity android:name=".HistoryActivity"
+            android:label="История"
+            android:theme="@style/Theme.AppCompat.Light.Dialog">
+        </activity>
+        <activity android:name=".AddOrDelActivity" />
+        <activity
+            android:name=".AboutDevActivity"
+            android:label="О разработчике"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".ChooseDLCActivity" />
+        <activity
+            android:name=".HowToPlayActivity"
+            android:label="Как играть"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".DLCActivity" />
         <activity android:name=".LooseActivity" />
         <activity android:name=".GameActivity" />
