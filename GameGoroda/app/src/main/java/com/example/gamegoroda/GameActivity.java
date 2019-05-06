@@ -1,5 +1,6 @@
 package com.example.gamegoroda;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,12 +13,11 @@ import android.widget.Toast;
 import java.io.File;
 
 public class GameActivity extends AppCompatActivity {
-
+    TextView textView;
     String theme;
     int k;
     int Score = 0;
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -39,6 +39,7 @@ public class GameActivity extends AppCompatActivity {
                 k = 1;
                 break;
         }
+        textView = (TextView)findViewById(R.id.textView4);
     }
     protected void buttonSend (View view) {
 
@@ -64,10 +65,18 @@ public class GameActivity extends AppCompatActivity {
             default:
                 lSymb = lSymb.toUpperCase();
         }
-        String Responce = data.confirmWord(Message, lSymb, pastText, theme, k,this);
+        String Responce = data.confirmWord(Message, lSymb, pastText, theme, k, getApplicationContext());
         Intent intent = new Intent(GameActivity.this, LooseActivity.class);
 
         switch (Responce) {
+            case " - Это имя уже называлось":
+            case " - Этот город уже назывался":
+            case " - Эта страна уже называлась":
+            case " - Указанного имени не существует":
+            case " - Указанного города не существует":
+            case " - Указанной страны не существует":
+                ((TextView)findViewById(R.id.textView4)).setText(Responce);
+                break;
 
             case "IAmWin":
                 intent.putExtra("Message", "ВЫ ПРОИГРАЛИ!");

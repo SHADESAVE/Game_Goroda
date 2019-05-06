@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="theme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:colorPrimaryDark">#883731</item>
-        <item name="android:navigationBarColor">#455092</item>
+        <item name="android:colorPrimaryDark">#00364B</item>
+        <item name="android:navigationBarColor">#00364B</item>
     </style>
 </resources>

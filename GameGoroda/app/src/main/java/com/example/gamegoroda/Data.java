@@ -21,7 +21,10 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Random;
 
-public class Data {
+import static java.security.AccessController.getContext;
+
+public class Data{
+
 //    void Legasy{
 //        {
 //            int[][] matrix = new int[29][];
@@ -2027,7 +2030,6 @@ public class Data {
     }
 
     String confirmWord(String word, String lSymb, String pastText, String theme, int k, Context ctx) {
-
         createAListHistory(ctx, k);
         createAList(theme, k, ctx);
         correcAList(ctx);
@@ -2059,15 +2061,11 @@ public class Data {
 //                else
 //                    break;
 //            }
-            TextView textView = (TextView) ((Activity)ctx).findViewById(R.id.textView4);
-            textView.setText(mess1);
-            return (pastText);
+            return (mess1);
         }
 
         if(!aList.contains(word)){
-            TextView textView = (TextView) ((Activity)ctx).findViewById(R.id.textView4);
-            textView.setText(mess2);
-            return (pastText);
+            return (mess2);
         }
 
         aListHistory.add(word);

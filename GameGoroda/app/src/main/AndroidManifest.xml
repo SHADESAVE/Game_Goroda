@@ -11,23 +11,32 @@
         android:theme="@style/theme">
         <activity android:name=".HistoryActivity"
             android:label="История"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.Dialog">
         </activity>
-        <activity android:name=".AddOrDelActivity" />
+        <activity android:name=".AddOrDelActivity"
+            android:screenOrientation="portrait"/>
         <activity
+            android:screenOrientation="portrait"
             android:name=".AboutDevActivity"
             android:label="О разработчике"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".ChooseDLCActivity" />
         <activity
+            android:screenOrientation="portrait"
             android:name=".HowToPlayActivity"
             android:label="Как играть"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
-        <activity android:name=".DLCActivity" />
-        <activity android:name=".LooseActivity" />
-        <activity android:name=".GameActivity" />
-        <activity android:name=".DifficultyActivity" />
-        <activity android:name=".MenuActivity">
+        <activity android:name=".DLCActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LooseActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".GameActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".DifficultyActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MenuActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

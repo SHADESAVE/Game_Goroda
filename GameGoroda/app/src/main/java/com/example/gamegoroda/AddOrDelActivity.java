@@ -83,6 +83,7 @@ public class AddOrDelActivity extends AppCompatActivity {
                     ((TextView)findViewById(R.id.textViewAlert)).setText(" - Это слово уже присутствует в списке");
                     return;
                 }
+                ((TextView)findViewById(R.id.textViewAlert)).setText(" - Добавлено");
                 //Toast toast = Toast.makeText(this, "Слово добавлено", Toast.LENGTH_SHORT);
                 //toast.show();
                 break;
@@ -92,6 +93,7 @@ public class AddOrDelActivity extends AppCompatActivity {
                     ((TextView)findViewById(R.id.textViewAlert)).setText(" - Это слово отсутсвует в списке");
                     return;
                 }
+                ((TextView)findViewById(R.id.textViewAlert)).setText(" - Удалено");
                 //Toast toast2 = Toast.makeText(this, "Слово удалено", Toast.LENGTH_SHORT);
                 //toast2.show();
                 break;
